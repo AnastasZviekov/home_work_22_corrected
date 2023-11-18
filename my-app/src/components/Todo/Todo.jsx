@@ -16,10 +16,10 @@ import "./style1.css"
 
 
                     transferToSecond () {
-
+                        let copiedArr=this.state.firstList
                         this.setState({
-                            firstList:this.state.firstList,
-                            secondList:this.state.secondList.unshift(this.state.firstList.slice(0,1))
+                            secondList:this.state.secondList.unshift(copiedArr.shift())
+                          /*  secondList:this.state.secondList.unshift(copiedArr.splice(0,1))*/
                         })
                     }
 
@@ -28,7 +28,7 @@ import "./style1.css"
                     <div className={this.state.containerClassName}>
                     <div className={this.state.classNameList}>
                     <List list={ this.state.firstList }/>
-                    <Button  title="Transfer first to right" clickFn={this.transferToSecond}/>
+                    <Button  title="Transfer first to right" clickFn={this.transferToSecond.bind(this)}/>
                 </div>
                 <div className={this.state.classNameList}>
                     <List list={ this.state.secondList }/>
