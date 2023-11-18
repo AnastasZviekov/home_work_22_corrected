@@ -1,0 +1,12 @@
+
+.button {
+    color: #213547;
+    width: 150px;
+    height: 30px;
+    text-align: left;
+    font-size: 12px;
+    background: azure;
+    display: block;
+    margin-bottom: 7px;
+    margin-left: 4px;
+}
