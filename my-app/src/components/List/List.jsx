@@ -1,16 +1,16 @@
 import React, {Component} from "react";
-import "./style1.css"
+import "./style1.css";
 
-export default class List extends React.Component{
-
-    state={
-        list: this.props.list ?this.props.list : [],
-
-    }
-
+export default class List extends React.Component {
     render () {
-
-        return   <ul> {this.state.list.map((el,i)=><li key={i}> {el.title}</li>)}</ul>
+        let {list = []} = this.props;
+        return (
+            <ul>
+                { " " }
+                { list.map( (el, i) => (
+                    <li key={ i }> { el.title }</li>
+                ) ) }
+            </ul>
+        );
     }
 }
-

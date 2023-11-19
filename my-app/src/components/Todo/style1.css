@@ -5,7 +5,25 @@
 }
 
 .div_list {
-    border: 2px solid blueviolet;
+    border: 2px solid green;
     width: 170px;
+    height:210px;
     border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+
+.div_list:first-child{
+    border: 2px solid green;
+}
+
+
+.div_list:nth-child(2) {
+    border: 2px solid sienna;
+}
+
+
+.div_list:nth-child(3) {
+    border: 2px solid blueviolet;
 }
